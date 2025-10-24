@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32"  href="favicons/favicon32x32.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>Dashboard de PI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <div class="barralateral" id="sidebar">
+        <!-- Logo -->
+        <div class="logo-container">
+        <img src="imagens/logo.png" alt="Logo do Dashboard">
+        </div>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#">Visão Geral</a></li>
+            <li><a href="#">Vendas</a>
+            <ul>
+                <li>Vendas Totais</li>
+                <li>Vendas por Período</li>
+                <li>Vendas por Produto</li>
+                <li>Vendas por Região</li>
+            </ul>
+            </li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#">Configurações</a></li>
+        </ul>
+    </div>
+
+    <div class="inicio">
+        <div class="header">
+        <h1>Dashboard do PI</h1>
+        </div>
+        <div class="categorias">
+            <div class="categoria">
+                <h3>Vendas Hoje</h3>
+                <p>45</p>
+            </div>
+            <div class="categoria">
+                <h3>Venda Mensal</h3>
+                <p>10.873,15</p>
+            </div>
+            <div class="categoria">
+                <h3>Novos Clientes</h3>
+                <p>38</p>
+            </div>
+            <div class="categoria">
+                <h3>Vendas totais (R$)</h3>
+                <p>114.820,59</p>
+            </div>
+        </div>
+        <h2>Gráficos e Métricas</h2>
+
+<div class="container-graficos">
+  <!-- Gráfico de Barras -->
+  <div class="grafico-barras">
+    <h3>Vendas por Mês</h3>
+    <div class="graficos">
+      <div class="barra" style="height: 80%;">Jan</div>
+      <div class="barra" style="height: 60%;">Fev</div>
+      <div class="barra" style="height: 90%;">Mar</div>
+      <div class="barra" style="height: 70%;">Abr</div>
+    </div>
+  </div>
+
+  <!-- Gráfico de Pizza -->
+  <div class="grafico-pizza-container">
+    <h3>Vendas por Categoria</h3>
+    <div class="grafico-pizza"></div>
+    <ul class="legenda-pizza">
+      <li><span class="cor cor1"></span> Eletrônicos – 40%</li>
+      <li><span class="cor cor2"></span> Moda – 25%</li>
+      <li><span class="cor cor3"></span> Casa & Jardim – 20%</li>
+      <li><span class="cor cor4"></span> Outros – 15%</li>
+    </ul>
+  </div>
+</div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('ativa');
+        }
+    </script>
+</body>
+
+</html>
