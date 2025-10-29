@@ -107,21 +107,51 @@ body {
 }
 
 /* Conteúdo principal parte da Visão geral*/
-.header { /*cabeçalho*/
-    padding: 1rem;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    background-image: linear-gradient(to bottom, #d9d9d9ff, transparent);
-    color: white;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 220px;
+    right: 0;
+    height: 70px;
+    background-image: linear-gradient(to bottom, #d9d9d9ff, white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 900;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Campo de busca */
+.campo-busca {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    width: 180px;
+    transition: width 0.3s ease;
+}
+
+.campo-busca:focus {
+    width: 250px;
+    border-color: #2c3e50;
+}
+
 .inicio {
     margin-left: 220px;
     padding: 10px;
     width: calc(100% - 220px);
     overflow-y: auto;
     transition: margin-left 0.3s ease, width 0.3s ease;
+    padding-top: 90px; /* espaço para o header fixo */
 }
-
 .inicio h1 {
     margin: 10px;
     color: #2c3e50;
